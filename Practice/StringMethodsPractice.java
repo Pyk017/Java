@@ -162,12 +162,56 @@ class StringMethods {
         rep = str.replace("a", "end");
         System.out.println(rep);
     }
+
+    public void SplitExample() {
+        String s1 = "java string method by examples.";
+
+        String[] words = s1.split("\\s", 4);
+
+        for (String word: words) {
+            System.out.println(word);
+        }
+    }
+
+    public void StartsWithExample() {
+        String s1 = "JavaScript is the most conceptual language in the community.";
+
+        System.out.println(s1.startsWith("JavaScript")); //? true
+        System.out.println(s1.startsWith("Java")); //? true
+        System.out.println(s1.startsWith("javascript")); //? false, as "j" and "J" are different.
+        System.out.println(s1.startsWith("ava", 1)); //? true, it starts with index 1.
+    }
+
+    public void SubStringExmple() {
+        String s = "javascript";
+
+        System.out.println(s.substring(2, 5)); //? vas, inclusive begin index,  exclusive of end index.
+        System.out.println(s.substring(3)); //? ascript, begin index.
+    }
+
+    public void ToCharArrayExample() {
+        String s = "Java is King.";
+
+        char[] ch = s.toCharArray();
+
+        System.out.println(ch); //? Java is King.
+        for (char c: ch) {
+            System.out.println(c);
+        }
+    }
+
+    public void ToUpperLowerCase() {
+        String s1 = "JAVASCRIPT Is fUN!";
+        
+        System.out.println(s1.toLowerCase());
+        System.out.println(s1.toUpperCase());
+    }
 }
 
 
 public class StringMethodsPractice {
     public static void main(String[] args) {
         StringMethods stringMethods = new StringMethods();   
-        stringMethods.ReplaceExample();
+        stringMethods.ToUpperLowerCase();
     }   
 }
