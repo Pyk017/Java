@@ -1,7 +1,10 @@
 package numbers;
 
 import java.util.Scanner;
+
+import numbers.variants.Reverse;
 import numbers.variants.*;
+
 
 public class Driver {
 
@@ -15,6 +18,7 @@ public class Driver {
                     + "Enter 4 to check if the number is PETERSON's Number or not.\n"
                     + "Enter 5 to check if the number is SUNNY's number or not.\n"
                     + "Enter 6 to check if the number is Tech number or not.\n"
+                    + "Enter 7 to check if the number is Fascinating number or not.\n"
                     + "Enter q to find the Reverse of the Number.\n");
 
             char option = scan.next().charAt(0);
@@ -52,6 +56,11 @@ public class Driver {
                         input = getInput("Enter number to check if it is Tech Number or not :- ");
                         boolean isTechNum = TechNumber.isTechNumber(input);
                         output(String.valueOf(isTechNum), "TECH NUMBER");
+                        break;
+                    case '7':
+                        input = getInput("Enter number to check if it is Fascinating number or not :- ");
+                        boolean isFascinating = Fascinating.isFascinating(input);
+                        output(String.valueOf(isFascinating), "FASCINATING NUMBER");
                         break;
                     default:
                         System.out.println("Invalid Input!");
