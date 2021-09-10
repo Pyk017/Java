@@ -8,6 +8,7 @@
       "type": "java",
       "name": "Launch Driver",
       "request": "launch",
+<<<<<<< HEAD
       "mainClass": "string.Driver",
       "projectName": "Basics_afb1548a"
     },
@@ -22,6 +23,8 @@
       "type": "java",
       "name": "Launch Driver",
       "request": "launch",
+=======
+>>>>>>> dc0b4ed6f5d9e80383ced7f2f76d5e33c8a99de7
       "mainClass": "numbers.Driver",
       "projectName": "Basics_afb1548a"
     },
