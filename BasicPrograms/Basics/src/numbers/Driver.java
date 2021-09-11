@@ -13,7 +13,8 @@ public class Driver {
     public static void main(String[] args) {
 
         while (true) {
-            System.out.println("Enter 1 for REVERSE NUMBER.\n" + "Enter 2 for NUMBER to WORD.\n"
+            System.out.println("Enter 1 for REVERSE NUMBER.\n" 
+                    + "Enter 2 for NUMBER to WORD.\n"
                     + "Enter 3 to find the AUTOMORPHICITY of the Number.\n"
                     + "Enter 4 to check if the number is PETERSON's Number or not.\n"
                     + "Enter 5 to check if the number is SUNNY's number or not.\n"
@@ -24,6 +25,12 @@ public class Driver {
                     + "Enter 10 to check if the number is Spy Number or not.\n"
                     + "Enter 11 to check if the number is Autobiographical Number or not.\n"
                     + "Enter 12 to check if the number is Emirp Number or not.\n"
+                    + "Enter 13 to check if the number is Armstrong Number or not.\n"
+                    + "Enter 14 for printing Fibonacci Series.\n"
+                    + "Enter 15 to check if the String\\Number is Palindrome or not.\n"
+                    + "Enter 16 to check if the Number is Prime or not.\n"
+                    + "Enter 17 to print Prime Number Series upto Upper bound.\n"
+                    + "Enter 18 to generate randome number between upper and lower bo"
                     + "Enter q to find the Reverse of the Number.\n");
 
             String option = scan.next();
@@ -92,6 +99,36 @@ public class Driver {
                         boolean isEmirp = Emirp.isEmirp(input);
                         output(String.valueOf(isEmirp), "EMIRP NUMBER");
                         break;
+                    case "13":
+                        input = getInput("Enter number to check if it is Armstrong number or not :- ");
+                        boolean isArmstrong = Armstrong.isArmstrong(input);
+                        output(String.valueOf(isArmstrong), "ARMSTRONG NUMBER :- ");
+                        break;
+                    case "14":
+                        input = getInput("Enter the total numbers of Fibonacci series required :- ");
+                        boolean fiboPrinted = FibonacciSeries.fiboSeriesOptimised(input);
+                        output(String.valueOf(fiboPrinted), "FIBONACCI SERIES :- ");
+                        break;
+                    case "15":
+                        input = getInput("Enter String to check if it is Palindrome or not!");
+                        boolean isPalindrome = Palindrome.isPalindrome(input);
+                        output(String.valueOf(isPalindrome), "PALINDROME NUMBER :- ");
+                        break;
+                    case "16":
+                        input = getInput("Enter the number to check if the number is Prime or not :-");
+                        boolean isPrime = PrimeNumber.isPrime(input);
+                        output(String.valueOf(isPrime), "PRIME NUMBER :-  ");
+                        break;
+                    case "17":
+                        input = getInput("Enter Upper bound to print Prime Number series(starting from 0) :-");
+                        PrimeNumber.displaySeries(input);
+                        break;
+                    case "18":
+                        input = getInput("Enter Lower and Upper bound to generate randome number in between(separated by a whitespace) :- ");
+                        String randNum = RandomNumber.generateRandom(input);
+                        output(randNum, "RANDOM NUMBER :- ");
+                        break;
+                        
                     default:
                         System.out.println("Invalid Input!");
                         break;

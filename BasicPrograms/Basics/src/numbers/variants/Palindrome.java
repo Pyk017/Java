@@ -1,22 +1,6 @@
-import java.util.Scanner;
+package numbers.variants;
 
 public class Palindrome {
-    public static void main(String args[]) {
-        Scanner scan = new Scanner(System.in);
-
-        System.out.println("Enter String to check if it is Palindrome or not!");
-        String string = scan.nextLine();
-
-        boolean result = isPalindrome(string);
-
-        if (result) {
-            System.out.println("Your String is PALINDROME!");
-        } else {
-            System.out.println("NOT PALINDROME!");
-        }
-
-        scan.close();
-    }
 
     public static boolean isPalindrome(String str) {
 
