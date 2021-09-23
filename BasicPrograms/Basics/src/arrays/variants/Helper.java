@@ -4,6 +4,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Helper {
+
+    public static void print(int[] array) {
+        for (int element: array) {
+            System.out.print(element + " ");
+        }
+    }
+
+    public static void print(String[] array) {
+        for (String string: array) {
+            System.out.print(string + " ");
+        }
+    }
+
     public static int[] stringToIntegerArray(String array) {
 
         String[] arr = array.split(" ");

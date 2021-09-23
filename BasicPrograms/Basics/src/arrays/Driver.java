@@ -15,6 +15,7 @@ public class Driver {
                                 + "Press 2 for Program to find the frequency of each element in the array.\n"
                                 + "Press 3 for Program to left rotate the elements of an array.\n"
                                 + "Press 4 for Program to print the duplicate elements of an array.\n"
+                                + "Press 5 to Program to print the elements of an array in reverse order.\n"
                                 + "Press q to exit!");
 
             String option = scan.nextLine().trim();
@@ -43,6 +44,11 @@ public class Driver {
                         array = getInput("Enter elements (separated by whitespace) :- ");
                         resultantArray = DublicateElements.duplicateElements(array);
                         showOutput(resultantArray, "Dublicate elements are :- ");
+                        break;
+                    case "5":
+                        array = getInput("Enter elements (separated by whitespace) :- ");
+                        resultantArray = PrintReverse.printReverse(array);
+                        showOutput(resultantArray, "Revere of the array is :- ");
                         break;
                     default:
                         System.out.println("Invalid Option!");
