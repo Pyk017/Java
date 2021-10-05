@@ -13,35 +13,25 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="input-group">
-      <div class="form-outline">
-        <input type="search" id="form1" class="form-control" />
-        <label class="form-label" for="form1">Search</label>
-      </div>
-      <button type="button" class="btn btn-primary">
-        <i class="fas fa-search"></i>
-      </button>
+    <div class="container">
+      <form class="form">
+        <input id="content" />
+        <button
+          class="btn btn-primary"
+          onclick="testFunc('content')"
+          type="button"
+        >
+          Click Me
+        </button>
+      </form>
     </div>
 
-    <form
-      class="
-        form-inline
-        d-flex
-        justify-content-center
-        md-form
-        form-sm
-        active-cyan-2
-        mt-2
-      "
-    >
-      <input
-        class="form-control form-control-sm mr-3 w-75"
-        type="text"
-        placeholder="Search"
-        aria-label="Search"
-      />
-      <i class="fas fa-search" aria-hidden="true"></i>
-    </form>
+    <script>
+      function testFunc(params) {
+        let text = document.getElementById(params);
+        text.value = "Testing Successful!";
+      }
+    </script>
 
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
